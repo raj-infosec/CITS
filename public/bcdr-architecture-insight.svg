@@ -1,0 +1,248 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" style="background:#030712; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="glow-teal" cx="75%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-sky" cx="25%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-center" cx="50%" cy="50%" r="30%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="card-grad-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="card-grad-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#06191f" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="stream-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="tech-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4"/>
+      <circle cx="0" cy="0" r="1" fill="#334155" opacity="0.6"/>
+    </pattern>
+
+    <!-- Filters for Glow Effects -->
+    <filter id="glow-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="soft-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Base Technical Grid Canvas -->
+  <rect width="1200" height="675" fill="#030712" />
+  <rect width="1200" height="675" fill="url(#tech-grid)" />
+  <rect width="1200" height="675" fill="url(#glow-sky)" />
+  <rect width="1200" height="675" fill="url(#glow-teal)" />
+  <rect width="1200" height="675" fill="url(#glow-center)" />
+
+  <!-- TOP HEADER HUD -->
+  <g transform="translate(60, 36)">
+    <!-- Category Badge -->
+    <rect x="0" y="0" width="340" height="28" rx="6" fill="#042f2e" stroke="#0d9488" stroke-width="1" />
+    <circle cx="16" cy="14" r="4" fill="#2dd4bf" filter="url(#glow-blur)"/>
+    <text x="30" y="19" font-size="11" font-family="monospace" font-weight="700" fill="#5eead4" letter-spacing="1.5">CITS BCDR ARCHITECTURE TOPOLOGY</text>
+
+    <!-- Header Titles -->
+    <text x="0" y="60" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Dual-Site Continuous Replication &amp; Instant Virtual Failover</text>
+    <text x="0" y="84" font-size="13" fill="#94a3b8">Zero-loss transaction synchronization with sub-15 minute bare-metal boot and air-gapped immunity</text>
+
+    <!-- Right Live Health Status -->
+    <g transform="translate(860, 4)">
+      <rect x="0" y="0" width="220" height="34" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <circle cx="20" cy="17" r="5" fill="#10b981" filter="url(#glow-blur)" />
+      <text x="35" y="21" font-size="11" font-family="monospace" font-weight="700" fill="#34d399">HEARTBEAT: ACTIVE (0.4s)</text>
+    </g>
+  </g>
+
+  <!-- ================= LEFT CONTAINER: PRIMARY PRODUCTION SITE ================= -->
+  <g transform="translate(60, 140)" filter="url(#soft-shadow)">
+    <!-- Outer Card -->
+    <rect x="0" y="0" width="340" height="350" rx="16" fill="url(#card-grad-left)" stroke="#334155" stroke-width="1.5" />
+    <rect x="0" y="0" width="340" height="42" rx="16" fill="#1e293b" fill-opacity="0.5" />
+    
+    <!-- Header -->
+    <circle cx="24" cy="21" r="5" fill="#38bdf8" />
+    <text x="38" y="26" font-size="12" font-family="monospace" font-weight="800" fill="#e2e8f0" letter-spacing="1">PRIMARY PRODUCTION SITE</text>
+    <rect x="250" y="11" width="76" height="20" rx="4" fill="#0284c7" fill-opacity="0.2" stroke="#38bdf8" stroke-width="0.7"/>
+    <text x="258" y="25" font-size="9" font-family="monospace" font-weight="700" fill="#38bdf8">HOST: LIVE</text>
+
+    <!-- Server Rack Representation -->
+    <g transform="translate(24, 60)">
+      <!-- Server 1: Core Database -->
+      <rect x="0" y="0" width="292" height="66" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1.2" />
+      <rect x="12" y="14" width="8" height="38" rx="2" fill="#0284c7" />
+      <circle cx="34" cy="26" r="3" fill="#22c55e" />
+      <circle cx="44" cy="26" r="3" fill="#38bdf8" />
+      <circle cx="54" cy="26" r="3" fill="#38bdf8" />
+      <text x="70" y="28" font-size="13" font-weight="700" fill="#f8fafc">Core SQL &amp; Oracle Database</text>
+      <text x="70" y="46" font-size="11" font-family="monospace" fill="#64748b">Transactions: 4,820 ops/sec • RAID 10</text>
+      <rect x="235" y="24" width="45" height="18" rx="3" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+      <text x="242" y="36" font-size="9" font-family="monospace" fill="#38bdf8">I/O 100%</text>
+
+      <!-- Server 2: Enterprise ERP / Core Apps -->
+      <rect x="0" y="78" width="292" height="66" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1.2" />
+      <rect x="12" y="92" width="8" height="38" rx="2" fill="#0369a1" />
+      <circle cx="34" cy="104" r="3" fill="#22c55e" />
+      <circle cx="44" cy="104" r="3" fill="#22c55e" />
+      <circle cx="54" cy="104" r="3" fill="#94a3b8" />
+      <text x="70" y="106" font-size="13" font-weight="700" fill="#f8fafc">Enterprise ERP &amp; App Clusters</text>
+      <text x="70" y="124" font-size="11" font-family="monospace" fill="#64748b">18 VM Instances • VMware / Hyper-V</text>
+      <rect x="235" y="102" width="45" height="18" rx="3" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+      <text x="242" y="114" font-size="9" font-family="monospace" fill="#22c55e">HEALTHY</text>
+
+      <!-- Storage Array SAN/NAS -->
+      <rect x="0" y="156" width="292" height="66" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1.2" />
+      <rect x="12" y="170" width="8" height="38" rx="2" fill="#0ea5e9" />
+      <circle cx="34" cy="182" r="3" fill="#22c55e" />
+      <circle cx="44" cy="182" r="3" fill="#22c55e" />
+      <circle cx="54" cy="182" r="3" fill="#22c55e" />
+      <text x="70" y="184" font-size="13" font-weight="700" fill="#f8fafc">Production SAN/NAS Storage Tier</text>
+      <text x="70" y="202" font-size="11" font-family="monospace" fill="#64748b">NVMe All-Flash • Dell EMC / HPE 48TB</text>
+      <rect x="235" y="180" width="45" height="18" rx="3" fill="#0f172a" stroke="#334155" stroke-width="0.8"/>
+      <text x="243" y="192" font-size="9" font-family="monospace" fill="#38bdf8">ACTIVE</text>
+    </g>
+
+    <!-- Footer Status -->
+    <rect x="16" y="302" width="308" height="34" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="32" y="323" font-size="11" font-family="monospace" fill="#94a3b8">Source Delta Agent: v4.8 Continuous Capture</text>
+  </g>
+
+  <!-- ================= MIDDLE CONNECTOR: REPLICATION & AIR-GAP ================= -->
+  <g transform="translate(420, 170)">
+    <!-- Dynamic Glowing Pipeline Line -->
+    <path d="M 0 50 L 360 50" stroke="url(#stream-grad)" stroke-width="3.5" stroke-dasharray="8 6" filter="url(#glow-blur)"/>
+    <path d="M 0 50 L 360 50" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="8 6" />
+
+    <path d="M 0 160 L 360 160" stroke="#0d9488" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.7"/>
+
+    <!-- Replication Badge Hub -->
+    <g transform="translate(70, 0)">
+      <rect x="0" y="10" width="220" height="80" rx="12" fill="#021f2d" stroke="#0284c7" stroke-width="1.5" filter="url(#soft-shadow)"/>
+      <text x="110" y="34" font-size="10" font-family="monospace" font-weight="800" fill="#38bdf8" text-anchor="middle" letter-spacing="1">CONTINUOUS REPLICATION</text>
+      <text x="110" y="54" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">RPO &lt; 5 SECONDS</text>
+      <text x="110" y="72" font-size="10" font-family="monospace" fill="#7dd3fc" text-anchor="middle">AES-256 Encrypted Sync • 0% I/O Drag</text>
+
+      <!-- Pulsing Data Stream Particle -->
+      <circle cx="110" cy="50" r="2" fill="#38bdf8" />
+    </g>
+
+    <!-- Air-Gap Immutability Shield Barrier -->
+    <g transform="translate(70, 115)">
+      <rect x="0" y="0" width="220" height="80" rx="12" fill="#052e2b" stroke="#0d9488" stroke-width="1.5" filter="url(#soft-shadow)"/>
+      <text x="110" y="24" font-size="10" font-family="monospace" font-weight="800" fill="#2dd4bf" text-anchor="middle" letter-spacing="1">AIR-GAPPED SHIELD</text>
+      <text x="110" y="44" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">Ransomware Immunity</text>
+      <text x="110" y="64" font-size="10" font-family="monospace" fill="#5eead4" text-anchor="middle">Write-Once Read-Many (WORM)</text>
+    </g>
+
+    <!-- Failover Directional Flow Arrow -->
+    <g transform="translate(145, 215)">
+      <rect x="-60" y="-12" width="190" height="26" rx="6" fill="#134e4a" stroke="#2dd4bf" stroke-width="1"/>
+      <text x="35" y="5" font-size="10" font-family="monospace" font-weight="700" fill="#ccfbf1" text-anchor="middle">AUTO-SYNCHRONIZED ➔</text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT CONTAINER: CITS BCDR ENGINE (QUORUM onQ) ================= -->
+  <g transform="translate(800, 140)" filter="url(#soft-shadow)">
+    <!-- Outer Card -->
+    <rect x="0" y="0" width="340" height="350" rx="16" fill="url(#card-grad-right)" stroke="#0d9488" stroke-width="1.8" />
+    <rect x="0" y="0" width="340" height="42" rx="16" fill="#0f766e" fill-opacity="0.3" />
+    
+    <!-- Header -->
+    <circle cx="24" cy="21" r="5" fill="#2dd4bf" filter="url(#glow-blur)"/>
+    <text x="38" y="26" font-size="12" font-family="monospace" font-weight="800" fill="#e2e8f0" letter-spacing="1">QUORUM onQ BCDR APPLIANCE</text>
+    <rect x="240" y="11" width="86" height="20" rx="4" fill="#134e4a" stroke="#2dd4bf" stroke-width="0.8"/>
+    <text x="248" y="25" font-size="9" font-family="monospace" font-weight="700" fill="#5eead4">READY TO BOOT</text>
+
+    <!-- Standby Recovery Nodes -->
+    <g transform="translate(24, 60)">
+      <!-- Standby Node 1: Virtual Standby Clone -->
+      <rect x="0" y="0" width="292" height="66" rx="8" fill="#042023" stroke="#115e59" stroke-width="1.2" />
+      <rect x="12" y="14" width="8" height="38" rx="2" fill="#14b8a6" />
+      <circle cx="34" cy="26" r="3" fill="#2dd4bf" />
+      <circle cx="44" cy="26" r="3" fill="#2dd4bf" />
+      <circle cx="54" cy="26" r="3" fill="#2dd4bf" />
+      <text x="70" y="28" font-size="13" font-weight="700" fill="#f8fafc">Standby Database Virtual Clone</text>
+      <text x="70" y="46" font-size="11" font-family="monospace" fill="#5eead4">Identical IP &amp; MAC • Ready in 14s</text>
+      <rect x="235" y="24" width="45" height="18" rx="3" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+      <text x="242" y="36" font-size="9" font-family="monospace" fill="#6ee7b7">STANDBY</text>
+
+      <!-- Standby Node 2: App & File Services -->
+      <rect x="0" y="78" width="292" height="66" rx="8" fill="#042023" stroke="#115e59" stroke-width="1.2" />
+      <rect x="12" y="92" width="8" height="38" rx="2" fill="#0d9488" />
+      <circle cx="34" cy="104" r="3" fill="#2dd4bf" />
+      <circle cx="44" cy="104" r="3" fill="#2dd4bf" />
+      <circle cx="54" cy="104" r="3" fill="#94a3b8" />
+      <text x="70" y="106" font-size="13" font-weight="700" fill="#f8fafc">Automated Failover Clones (18 VMs)</text>
+      <text x="70" y="124" font-size="11" font-family="monospace" fill="#5eead4">Isolated Sandbox Testing Enabled</text>
+      <rect x="235" y="102" width="45" height="18" rx="3" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+      <text x="242" y="114" font-size="9" font-family="monospace" fill="#6ee7b7">VERIFIED</text>
+
+      <!-- Standby Node 3: Immutable Vault Repository -->
+      <rect x="0" y="156" width="292" height="66" rx="8" fill="#042023" stroke="#115e59" stroke-width="1.2" />
+      <rect x="12" y="170" width="8" height="38" rx="2" fill="#0f766e" />
+      <circle cx="34" cy="182" r="3" fill="#2dd4bf" />
+      <circle cx="44" cy="182" r="3" fill="#2dd4bf" />
+      <circle cx="54" cy="182" r="3" fill="#2dd4bf" />
+      <text x="70" y="184" font-size="13" font-weight="700" fill="#f8fafc">Deduplicated Immutable Vault</text>
+      <text x="70" y="202" font-size="11" font-family="monospace" fill="#5eead4">Point-in-Time Rollback (365 Days)</text>
+      <rect x="235" y="180" width="45" height="18" rx="3" fill="#134e4a" stroke="#2dd4bf" stroke-width="0.8"/>
+      <text x="240" y="192" font-size="9" font-family="monospace" fill="#5eead4">ENCRYPT</text>
+    </g>
+
+    <!-- Failover Trigger Button Emulation -->
+    <rect x="16" y="300" width="308" height="36" rx="8" fill="#0f766e" stroke="#2dd4bf" stroke-width="1.5" />
+    <text x="170" y="323" font-size="12" font-family="monospace" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">⚡ 1-CLICK INSTANT FAILOVER (&lt; 15m)</text>
+  </g>
+
+  <!-- ================= BOTTOM TELEMETRY DOCK (4 METRICS) ================= -->
+  <g transform="translate(60, 520)">
+    <!-- Metric 1: RTO -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="250" height="105" rx="12" fill="#090e1a" stroke="#1e293b" stroke-width="1.2" />
+      <text x="20" y="30" font-size="10" font-family="monospace" font-weight="700" fill="#64748b">RECOVERY TIME (RTO)</text>
+      <text x="20" y="65" font-size="28" font-weight="900" fill="#38bdf8">&lt; 15 Min</text>
+      <text x="20" y="88" font-size="11" fill="#94a3b8">Instant virtual boot on local hardware</text>
+    </g>
+
+    <!-- Metric 2: RPO -->
+    <g transform="translate(275, 0)">
+      <rect x="0" y="0" width="250" height="105" rx="12" fill="#042023" stroke="#0d9488" stroke-width="1.2" />
+      <text x="20" y="30" font-size="10" font-family="monospace" font-weight="700" fill="#5eead4">RECOVERY POINT (RPO)</text>
+      <text x="20" y="65" font-size="28" font-weight="900" fill="#2dd4bf">&lt; 5 Sec</text>
+      <text x="20" y="88" font-size="11" fill="#ccfbf1">Continuous sub-second transaction sync</text>
+    </g>
+
+    <!-- Metric 3: Air-Gap Ransomware Defense -->
+    <g transform="translate(550, 0)">
+      <rect x="0" y="0" width="250" height="105" rx="12" fill="#090e1a" stroke="#1e293b" stroke-width="1.2" />
+      <text x="20" y="30" font-size="10" font-family="monospace" font-weight="700" fill="#64748b">AIR-GAP IMMUTABILITY</text>
+      <text x="20" y="65" font-size="28" font-weight="900" fill="#f8fafc">100% Locked</text>
+      <text x="20" y="88" font-size="11" fill="#94a3b8">Write-Once snapshots immune to encryption</text>
+    </g>
+
+    <!-- Metric 4: Disaster Recovery Testing -->
+    <g transform="translate(825, 0)">
+      <rect x="0" y="0" width="255" height="105" rx="12" fill="#090e1a" stroke="#1e293b" stroke-width="1.2" />
+      <text x="20" y="30" font-size="10" font-family="monospace" font-weight="700" fill="#64748b">NON-DISRUPTIVE TESTING</text>
+      <text x="20" y="65" font-size="28" font-weight="900" fill="#34d399">0% Downtime</text>
+      <text x="20" y="88" font-size="11" fill="#94a3b8">Scheduled automated drills in sandbox</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none">
+  <defs>
+    <linearGradient id="favOrbGrad1" x1="12%" y1="8%" x2="88%" y2="92%">
+      <stop offset="0%" stop-color="#0072CE" />
+      <stop offset="60%" stop-color="#004B87" />
+      <stop offset="100%" stop-color="#002855" />
+    </linearGradient>
+    <linearGradient id="favOrbGrad2" x1="8%" y1="85%" x2="92%" y2="15%">
+      <stop offset="0%" stop-color="#00A3E0" />
+      <stop offset="50%" stop-color="#0077C8" />
+      <stop offset="100%" stop-color="#005A9C" />
+    </linearGradient>
+    <linearGradient id="favOrbGrad3" x1="0%" y1="40%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+  </defs>
+
+  <rect width="80" height="80" rx="16" fill="#0B2545" />
+
+  <g transform="translate(1, -2)">
+    <!-- Primary Outer Dynamic Swoosh -->
+    <path 
+      d="M42 10 C58 10 70 20 72 35 C74 48 66 60 52 66 C42 70 30 69 22 63 C18 60 20 56 24 57 C33 60 44 59 52 54 C62 47 66 38 64 28 C61 18 51 14 39 15 C28 16 19 22 14 31 C10 39 11 48 15 56 C16 58 14 60 12 59 C7 49 6 38 11 28 C17 17 28 10 42 10 Z" 
+      fill="url(#favOrbGrad1)" 
+    />
+    
+    <!-- Secondary Interlocking Kinetic Arc -->
+    <path 
+      d="M20 38 C19 26 27 16 38 12 C44 10 49 11 47 13 C41 15 35 19 31 24 C25 32 24 41 27 50 C30 58 37 64 46 65 C54 66 62 62 66 56 C68 53 70 54 69 57 C64 65 55 70 45 69 C32 68 22 60 18 48 C16 44 19 41 20 38 Z" 
+      fill="url(#favOrbGrad2)" 
+    />
+    
+    <!-- Inner Forward Acceleration Core -->
+    <path 
+      d="M32 30 C38 24 47 25 53 29 C57 32 60 37 59 42 C58 48 53 53 47 54 C41 55 35 52 32 47 C29 42 30 35 34 31 C36 29 37 31 35 33 C32 37 32 42 35 46 C38 49 43 51 47 49 C51 47 54 43 54 39 C54 35 52 32 49 30 C44 27 38 27 33 31 C31 32 30 31 32 30 Z" 
+      fill="url(#favOrbGrad3)" 
+    />
+
+    <!-- Core Technology Nexus Dot -->
+    <circle cx="43.5" cy="40" r="3.2" fill="#38BDF8" />
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "CITS - Complete IT Solutions",
+  "description": "Complete IT Solutions (CITS) delivers zero-trust cybersecurity, business continuity, high-density compute infrastructure, and enterprise IT architectures across East and Southern Africa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
